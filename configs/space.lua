@@ -1,10 +1,12 @@
+--!nocheck
 local dimmer = { brightness = 0.1 }
 local home = os.getenv("HOME")
 local parallax = {
 	-- This is the deepest/back-most layer. It will be rendered first
 	{
 		source = {
-			File = { path = home .. "/.config/wezterm/Parallax/Backgrounds/spaceship_bg_1.png" },
+			File = { path = home .. "/.config/wezterm/Parallax/Backgrounds/bg_single.png" },
+
 		},
 		-- The texture tiles vertically but not horizontally.
 		-- When we repeat it, mirror it so that it appears "more seamless".
@@ -20,7 +22,7 @@ local parallax = {
 	-- Subsequent layers are rendered over the top of each other
 	{
 		source = {
-			File = home .. "/.config/wezterm/Parallax/Overlays/overlay_1_spines.png",
+			File = home .. "/.config/wezterm/Parallax/Backgrounds/Objects/space_object_planetsunrise@2x.png",
 		},
 		width = "100%",
 		repeat_x = "NoRepeat",
@@ -35,39 +37,59 @@ local parallax = {
 	},
 	{
 		source = {
-			File = home .. "/.config/wezterm/Parallax/Overlays/overlay_2_alienball.png",
+			File = home .. "/.config/wezterm/Parallax/Backgrounds/Objects/space_object_galaxy.png",
 		},
 		width = "100%",
 		repeat_x = "NoRepeat",
 		-- start at 10% of the screen and repeat every 2 screens
-		vertical_offset = "10%",
+		vertical_offset = "20%",
 		repeat_y_size = "200%",
 		hsb = dimmer,
 		attachment = { Parallax = 0.3 },
 	},
 	{
 		source = {
-			File = home .. "/.config/wezterm/Parallax/Overlays/overlay_3_lobster.png",
+			File = home .. "/.config/wezterm/Parallax/Backgrounds/Objects/space_object_anomaly@2x.png",
 		},
 		width = "100%",
 		repeat_x = "NoRepeat",
-		vertical_offset = "30%",
+		vertical_offset = "20%",
 		repeat_y_size = "200%",
 		hsb = dimmer,
 		attachment = { Parallax = 0.4 },
 	},
 	{
 		source = {
-			File = {
-				path = home .. "/.config/wezterm/Parallax/Overlays/overlay_4_spiderlegs.png",
-			},
+			File = home .. "/.config/wezterm/Parallax/Backgrounds/Objects/space_object_galaxy@2x.png",
 		},
 		width = "100%",
 		repeat_x = "NoRepeat",
-		vertical_offset = "50%",
-		repeat_y_size = "150%",
+		vertical_offset = "20%",
+		repeat_y_size = "200%",
 		hsb = dimmer,
 		attachment = { Parallax = 0.5 },
 	},
+	{
+		source = {
+			File = home .. "/.config/wezterm/Parallax/Backgrounds/Objects/space_object_planetsunrise@2x.png",
+		},
+		width = "100%",
+		repeat_x = "NoRepeat",
+		vertical_offset = "20%",
+		repeat_y_size = "200%",
+		hsb = dimmer,
+		attachment = { Parallax = 0.6 },
+	},
+	{
+		source = {
+			File = home .. "/.config/wezterm/Parallax/Backgrounds/Objects/space_object_planetsunrise.png",
+		},
+		width = "100%",
+		repeat_x = "NoRepeat",
+		vertical_offset = "20%",
+		repeat_y_size = "200%",
+		hsb = dimmer,
+		attachment = { Parallax = 0.7 },
+	}
 }
 return parallax

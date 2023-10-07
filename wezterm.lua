@@ -1,7 +1,9 @@
+--!nocheck
 local wezterm = require("wezterm")
 local ssh_domains = require("configs.ssh")
-local parallax = require("configs.parallax")
-local starship_parallax = require("configs.parallax_spaceship")
+--to change the parallax to spaceship, replace local parallax = require("configs.space") with
+-- local parallax = require("configs.aliens_spaceship")
+local parallax = require("configs.space")
 local keys = require("configs.keys")
 local leader = { key = "a", mods = "CTRL" }
 local inactive_pane_hsb = {
@@ -30,13 +32,13 @@ config.skip_close_confirmation_for_processes_named = {
 	"nvim",
 }
 --
---harfbuzz_features = { "cv29", "cv30", "ss01", "ss03", "ss06", "ss07", "ss09" },
---config.window_padding = {
---left = "1cell",
---right = "1cell",
---top = "0.5cell",
---bottom = "0.5cell",
---}
+
+config.window_padding = {
+	left = "1cell",
+	right = "1cell",
+	top = "0.5cell",
+	bottom = "0.5cell",
+}
 config.enable_tab_bar = false
 config.force_reverse_video_cursor = true
 config.audible_bell = "Disabled"
@@ -45,7 +47,7 @@ config.font_size = 20.0
 config.window_close_confirmation = "NeverPrompt"
 config.enable_scroll_bar = false
 config.min_scroll_bar_height = "2cell"
-config.background = starship_parallax
+config.background = parallax
 config.use_fancy_tab_bar = false
 config.show_update_window = true
 config.check_for_updates = true
