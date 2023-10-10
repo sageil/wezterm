@@ -14,7 +14,7 @@
 ## Screenshots
 
 ![Terminal](assets/wezterm.png)
-![Parallex](assets/parallex.gif)
+![Parallax](assets/parallex.gif)
 
 ## Keys are configured in `./configs/keys.lua`
 
