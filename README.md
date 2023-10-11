@@ -70,3 +70,7 @@ local keys = {
 return keys
 
 ```
+
+## ZSH Theme
+
+[Saint Johns Arms AZH Theme](https://github.com/sageil/saint-johns-arms-zsh-theme)
