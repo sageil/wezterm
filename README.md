@@ -11,6 +11,10 @@
 - backup your existing wezterm configs `mv ~/.config/wezterm ~/.config/wezterm.bak`
 - Clone the repo to `~/.config/wezterm`
 
+## Font
+
+[Anonymous Pro with Ligatures](https://github.com/lemeb/a-better-ligaturizer)
+
 ## Screenshots
 
 ![Terminal](assets/wezterm.png)

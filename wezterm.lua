@@ -17,7 +17,7 @@ config.keys = keys
 config.inactive_pane_hsb = inactive_pane_hsb
 config.ssh_domains = ssh_domains
 config.font = wezterm.font_with_fallback({
-	"AnonymicePro Nerd Font Mono",
+	"Anonymous Pro",
 	harfbuzz_features = { "cv29", "cv30", "ss01", "ss03", "ss06", "ss09" },
 	{ family = "Symbols Nerd Font Mono", scale = 0.75 },
 })
