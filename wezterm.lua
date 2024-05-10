@@ -44,7 +44,6 @@ config.force_reverse_video_cursor = true
 config.audible_bell = "Disabled"
 config.hide_tab_bar_if_only_one_tab = true
 config.font_size = 20.0
-config.window_close_confirmation = "NeverPrompt"
 config.enable_scroll_bar = false
 config.min_scroll_bar_height = "2cell"
 config.background = parallax
