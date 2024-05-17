@@ -34,8 +34,8 @@ local keys = {
 	{ key = "x", mods = "LEADER", action = act({ CloseCurrentPane = { confirm = false } }) },
 	{ key = "n", mods = "SHIFT|CTRL", action = "ToggleFullScreen" },
 	{ key = "r", mods = "LEADER", action = act.ReloadConfiguration },
-	{ key = "c", mods = "CTRL", action = act.CopyTo("ClipboardAndPrimarySelection") },
-	{ key = "v", mods = "CTRL", action = act.PasteFrom("Clipboard") },
+	{ key = "c", mods = "CTRL|SHIFT", action = act.CopyTo("ClipboardAndPrimarySelection") },
+	{ key = "v", mods = "CTRL|SHIFT", action = act.PasteFrom("Clipboard") },
 	{
 		key = "q",
 		mods = "CMD",
