@@ -11,6 +11,16 @@ local keys = {
 		mods = "LEADER",
 		action = act({ SplitHorizontal = { domain = "CurrentPaneDomain" } }),
 	},
+	{
+		key = ",",
+		mods = "CMD",
+		domain = { DomainName = "CurrentPaneDomain" },
+		action = act.SpawnCommandInNewWindow({
+			cwd = os.getenv("WEZTERM_CONFIG_DIR"),
+			args = { os.getenv("SHELL"), "-c", "$EDITOR $WEZTERM_CONFIG_FILE" },
+			--	args = { "top" },
+		}),
+	},
 	{ key = "z", mods = "LEADER", action = "TogglePaneZoomState" },
 	{ key = "c", mods = "LEADER", action = act({ SpawnTab = "CurrentPaneDomain" }) },
 	{ key = "h", mods = "LEADER", action = act({ ActivatePaneDirection = "Left" }) },

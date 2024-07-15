@@ -3,14 +3,22 @@ local wezterm = require("wezterm")
 local ssh_domains = require("configs.ssh")
 --to change the parallax to spaceship, replace local parallax = require("configs.space") with
 -- local parallax = require("configs.aliens_spaceship")
-local parallax = require("configs.space")
+--local parallax = require("configs.aliens_spaceship")
 local keys = require("configs.keys")
+local mousebindings = require("configs.mouse")
 local leader = { key = "a", mods = "CTRL" }
 local inactive_pane_hsb = {
 	hue = 1.0,
 	saturation = 1.0,
 	brightness = 1.0,
 }
+local function scheme_for_appearance(appearance)
+	if appearance:find("Dark") then
+		return "Catppuccin Macchiato"
+	else
+		return "Catppuccin Latte"
+	end
+end
 local config = {}
 config.leader = leader
 config.keys = keys
@@ -45,12 +53,12 @@ config.audible_bell = "Disabled"
 config.hide_tab_bar_if_only_one_tab = true
 config.font_size = 20.0
 config.enable_scroll_bar = false
-config.min_scroll_bar_height = "2cell"
-config.background = parallax
+--config.min_scroll_bar_height = "2cell"
+-- config.background = parallax
 config.use_fancy_tab_bar = false
 config.show_update_window = true
 config.check_for_updates = true
 --config.color_scheme_dirs = { "./colors/" }
-config.color_scheme = "Catppuccin Macchiato"
-
+config.color_scheme = scheme_for_appearance(wezterm.gui.get_appearance())
+config.mouse_bindings = mousebindings.mouse_bindings
 return config
