@@ -23,4 +23,4 @@ config.mouse_bindings = {
 		action = wezterm.action.Nop,
 	},
 }
-return config
+return config.mouse_bindings

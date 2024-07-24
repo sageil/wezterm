@@ -20,6 +20,10 @@ local function scheme_for_appearance(appearance)
 	end
 end
 local config = {}
+if wezterm.config_builder then
+	config = wezterm.config_builder()
+end
+
 config.leader = leader
 config.keys = keys
 config.inactive_pane_hsb = inactive_pane_hsb
@@ -53,12 +57,11 @@ config.audible_bell = "Disabled"
 config.hide_tab_bar_if_only_one_tab = true
 config.font_size = 20.0
 config.enable_scroll_bar = false
---config.min_scroll_bar_height = "2cell"
 -- config.background = parallax
 config.use_fancy_tab_bar = false
 config.show_update_window = true
 config.check_for_updates = true
 --config.color_scheme_dirs = { "./colors/" }
+config.mouse_bindings = mousebindings
 config.color_scheme = scheme_for_appearance(wezterm.gui.get_appearance())
-config.mouse_bindings = mousebindings.mouse_bindings
 return config
