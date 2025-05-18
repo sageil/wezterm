@@ -12,13 +12,16 @@ local inactive_pane_hsb = {
 	saturation = 1.0,
 	brightness = 1.0,
 }
-local function scheme_for_appearance(appearance)
-	if appearance:find("Dark") then
-		return "Catppuccin Macchiato"
-	else
-		return "Catppuccin Latte"
-	end
-end
+-- uncomment the function below to change theme appearance based on current mode
+-- then use config.color_scheme = scheme_for_appearance(wezterm.gui.get_appearance())
+--
+-- local function scheme_for_appearance(appearance)
+-- 	if appearance:find("Dark") then
+-- 		return "Catppuccin Macchiato"
+-- 	else
+-- 		return "Catppuccin Latte"
+-- 	end
+-- end
 local config = {}
 if wezterm.config_builder then
 	config = wezterm.config_builder()
@@ -61,12 +64,12 @@ config.enable_scroll_bar = false
 config.use_fancy_tab_bar = false
 config.show_update_window = true
 config.check_for_updates = true
-config.window_decorations = "RESIZE"
+--config.window_decorations = "RESIZE"
 --config.window_decorations = "TITLE|RESIZE|MACOS_USE_BACKGROUND_COLOR_AS_TITLEBAR_COLOR"
 config.color_scheme_dirs = { "./colors/" }
 config.mouse_bindings = mousebindings
-config.window_background_opacity = 0.8
+config.window_background_opacity = 0.9
 config.text_background_opacity = 0.3
---changeconfig.color_scheme = scheme_for_appearance(wezterm.gui.get_appearance())
+--config.color_scheme = scheme_for_appearance(wezterm.gui.get_appearance())
 config.color_scheme = "coolnight"
 return config
