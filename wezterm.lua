@@ -61,7 +61,12 @@ config.enable_scroll_bar = false
 config.use_fancy_tab_bar = false
 config.show_update_window = true
 config.check_for_updates = true
---config.color_scheme_dirs = { "./colors/" }
+config.window_decorations = "RESIZE"
+--config.window_decorations = "TITLE|RESIZE|MACOS_USE_BACKGROUND_COLOR_AS_TITLEBAR_COLOR"
+config.color_scheme_dirs = { "./colors/" }
 config.mouse_bindings = mousebindings
-config.color_scheme = scheme_for_appearance(wezterm.gui.get_appearance())
+config.window_background_opacity = 0.8
+config.text_background_opacity = 0.3
+--changeconfig.color_scheme = scheme_for_appearance(wezterm.gui.get_appearance())
+config.color_scheme = "coolnight"
 return config

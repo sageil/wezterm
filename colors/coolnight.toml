@@ -1,37 +1,30 @@
-#By Josean Martinez
-# Inspired by aura.toml
+# coolnight
+[colors]
+foreground = "#e9def2"
+background = "#030b16"
+cursor_bg = "#7efba5"
+cursor_border = "#47FF9C"
+cursor_fg = "#000000"
+selection_bg = "#7efba4"
+selection_fg = "#000000"
 
-# Default colors
-[colors.primary]
-background = '#011423'
-foreground = '#CBE0F0'
-
-# Colors the cursor will use if `custom_cursor_colors` is true
-[colors.cursor]
-text = "#011423"
-cursor = "#47FF9C"
-
-[colors.normal]
-black = "#214969"
-red = "#E52E2E"
-green = "#44FFB1"
-yellow = "#FFE073"
-blue = "#0FC5ED"
-magenta = "#a277ff"
-cyan = "#24EAF7"
-white = "#24EAF7"
-
-[colors.bright]
-black = "#214969"
-red = "#E52E2E"
-green = "#44FFB1"
-yellow = "#FFE073"
-blue = "#A277FF"
-magenta = "#a277ff"
-cyan = "#24EAF7"
-white = "#24EAF7"
-[colors.indexed]
-
-[metadata]
-name = 'oldcoolnight'
-origin_url = 'https://gihub.com'
+ansi = [
+  "#1a3a5e",
+  "#ea4d44",
+  "#88fbd2",
+  "#fcf392",
+  "#3674f0",
+  "#be94e4",
+  "#ec69cf",
+  "#75f9a9",
+]
+brights = [
+"#63676c",
+"#eb60ad",
+"#99fbda",
+"#faf4b5",
+"#4f8bf6",
+"#a782f7",
+"#ed73d2",
+"#8df8c2",
+]
