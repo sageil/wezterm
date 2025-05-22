@@ -32,7 +32,7 @@ config.keys = keys
 config.inactive_pane_hsb = inactive_pane_hsb
 config.ssh_domains = ssh_domains
 config.font = wezterm.font_with_fallback({
-	"Anonymous Pro",
+	"DankMono Nerd Font Mono",
 	harfbuzz_features = { "cv29", "cv30", "ss01", "ss03", "ss06", "ss09" },
 	{ family = "Symbols Nerd Font Mono", scale = 0.75 },
 })
@@ -60,7 +60,6 @@ config.audible_bell = "Disabled"
 config.hide_tab_bar_if_only_one_tab = true
 config.font_size = 20.0
 config.enable_scroll_bar = false
--- config.background = parallax
 config.use_fancy_tab_bar = false
 config.show_update_window = true
 config.check_for_updates = true
