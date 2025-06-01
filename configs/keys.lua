@@ -15,9 +15,9 @@ local keys = {
 		key = ",",
 		mods = "CMD",
 		domain = { DomainName = "CurrentPaneDomain" },
-		action = act.SpawnCommandInNewWindow({
-			cwd = os.getenv("WEZTERM_CONFIG_DIR"),
-			args = { os.getenv("SHELL"), "-c", "$EDITOR $WEZTERM_CONFIG_FILE" },
+		action = act.SpawnCommandInNewTab({
+			cwd = wezterm.home_dir,
+			args = { "nvim", os.getenv("WEZTERM_CONFIG_DIR") },
 			--	args = { "top" },
 		}),
 	},

@@ -6,12 +6,13 @@ local ssh_domains = require("configs.ssh")
 --local parallax = require("configs.aliens_spaceship")
 local keys = require("configs.keys")
 local mousebindings = require("configs.mouse")
-local leader = { key = "a", mods = "CTRL" }
+local leader = { key = ".", mods = "CMD" }
 local inactive_pane_hsb = {
 	hue = 1.0,
 	saturation = 1.0,
 	brightness = 1.0,
 }
+
 -- uncomment the function below to change theme appearance based on current mode
 -- then use config.color_scheme = scheme_for_appearance(wezterm.gui.get_appearance())
 --
@@ -26,7 +27,9 @@ local config = {}
 if wezterm.config_builder then
 	config = wezterm.config_builder()
 end
-
+config.set_environment_variables = {
+	PATH = "/opt/homebrew/bin:" .. os.getenv("PATH"),
+}
 config.leader = leader
 config.keys = keys
 config.inactive_pane_hsb = inactive_pane_hsb
@@ -70,5 +73,6 @@ config.mouse_bindings = mousebindings
 config.window_background_opacity = 0.9
 config.text_background_opacity = 0.3
 --config.color_scheme = scheme_for_appearance(wezterm.gui.get_appearance())
-config.color_scheme = "coolnight"
+config.color_scheme = "rose-pine-moon"
+-- config.colors = theme.colors()
 return config
