@@ -6,7 +6,7 @@ local ssh_domains = require("configs.ssh")
 --local parallax = require("configs.aliens_spaceship")
 local keys = require("configs.keys")
 local mousebindings = require("configs.mouse")
-local leader = { key = ".", mods = "CMD" }
+local leader = { key = ".", mods = "SUPER" }
 local inactive_pane_hsb = {
 	hue = 1.0,
 	saturation = 1.0,
