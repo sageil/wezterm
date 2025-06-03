@@ -66,13 +66,16 @@ config.enable_scroll_bar = false
 config.use_fancy_tab_bar = false
 config.show_update_window = true
 config.check_for_updates = true
---config.window_decorations = "RESIZE"
+config.window_decorations = "RESIZE"
 --config.window_decorations = "TITLE|RESIZE|MACOS_USE_BACKGROUND_COLOR_AS_TITLEBAR_COLOR"
 config.color_scheme_dirs = { "./colors/" }
 config.mouse_bindings = mousebindings
 config.window_background_opacity = 0.9
-config.text_background_opacity = 0.3
+config.text_background_opacity = 0.95
 --config.color_scheme = scheme_for_appearance(wezterm.gui.get_appearance())
 config.color_scheme = "rose-pine-moon"
--- config.colors = theme.colors()
+config.colors = {
+	selection_bg = "#3e8fb0",
+}
+config.default_cursor_style = "SteadyBar"
 return config
