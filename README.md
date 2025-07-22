@@ -6,13 +6,12 @@
 - Clone the repo to `~/.config/wezterm`
 
 ## Font
-
-[Anonymous Pro with Ligatures](https://github.com/lemeb/a-better-ligaturizer)
+ Change the font [Monolisa](https://github.com/sageil/wezterm/blob/8c3880f5de9bec2291bf20d083e7ce5569cc78fe/wezterm.lua#L33)
 
 ## Screenshots
 
-![Terminal](assets/wezterm.png)
-
+![light](assets/wezterm-light.png)
+![dark](assets/wezterm-dark.png)
 ## Keys are configured in `./configs/keys.lua`
 
 ```lua
@@ -37,6 +36,7 @@ local keys = {
 		action = act.SpawnCommandInNewTab({
 			cwd = wezterm.home_dir,
 			args = { "nvim", os.getenv("WEZTERM_CONFIG_DIR") },
+			--	args = { "top" },
 		}),
 	},
 	{ key = "z", mods = "LEADER", action = "TogglePaneZoomState" },
@@ -72,7 +72,3 @@ local keys = {
 }
 return keys
 ```
-
-## ZSH Theme
-
-[Saint Johns Arms AZH Theme](https://github.com/sageil/saint-johns-arms-zsh-theme)
