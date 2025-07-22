@@ -6,7 +6,7 @@
 - Clone the repo to `~/.config/wezterm`
 
 ## Font
- Change the font [Monolisa](https://github.com/sageil/wezterm/blob/8c3880f5de9bec2291bf20d083e7ce5569cc78fe/wezterm.lua#L33)
+ Change the my configured font [Monolisa](https://github.com/sageil/wezterm/blob/8c3880f5de9bec2291bf20d083e7ce5569cc78fe/wezterm.lua#L33) to something else if you don't have it installed.
 
 ## Screenshots
 
