@@ -74,3 +74,7 @@ local keys = {
 }
 return keys
 ```
+## Features:
+
+1. CMD+, will open wezterm configs using [neovim](https://github.com/sageil/wezterm/blob/bc3babf6ba92e11b194cde1a73fe8f5d5fd5e42d/configs/keys.lua#L20). To continue to use this functionality, you need to setup `export EDITOR="nvim"` in your `.bashrc` or `.zshrc`
+2. Theme will [switch](https://github.com/sageil/wezterm/blob/bc3babf6ba92e11b194cde1a73fe8f5d5fd5e42d/wezterm.lua#L69) based on the system settings.
