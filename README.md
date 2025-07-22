@@ -12,7 +12,9 @@
 
 ![light](assets/wezterm-light.png)
 ![dark](assets/wezterm-dark.png)
-## Keys are configured in `./configs/keys.lua`
+## Keys
+
+The keys are configured in `./configs/keys.lua`
 
 ```lua
 
