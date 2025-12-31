@@ -1,0 +1,30 @@
+# coolnight
+[colors]
+foreground = "#e9def2"
+background = "#030b16"
+cursor_bg = "#7efba5"
+cursor_border = "#47FF9C"
+cursor_fg = "#000000"
+selection_bg = "#7efba4"
+selection_fg = "#000000"
+
+ansi = [
+  "#1a3a5e",
+  "#ea4d44",
+  "#88fbd2",
+  "#fcf392",
+  "#3674f0",
+  "#be94e4",
+  "#ec69cf",
+  "#75f9a9",
+]
+brights = [
+"#63676c",
+"#eb60ad",
+"#99fbda",
+"#faf4b5",
+"#4f8bf6",
+"#a782f7",
+"#ed73d2",
+"#8df8c2",
+]
