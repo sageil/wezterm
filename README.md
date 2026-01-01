@@ -4,9 +4,12 @@
 
 - backup your existing wezterm configs `mv ~/.config/wezterm ~/.config/wezterm.bak`
 - Clone the repo to `~/.config/wezterm`
-
+> [!IMPORTANT]
+> None MAC Users: Remove the `config.set_environment_variables = {
+	PATH = "/opt/homebrew/bin:" .. os.getenv("PATH"),
+}` from [wezterm.lua](https://github.com/sageil/wezterm/blob/7864a84ef040591a53c77c2fa5abf045a962d4c8/wezterm.lua#L24C1-L26C2)
 ## Font
- Download and install [Maple Mono NF](https://github.com/subframe7536/maple-font) or [change it to your favourite font](https://github.com/sageil/wezterm/blob/44e5da106b093bf0654cc8c3ea11788c304241bd/wezterm.lua#L32).
+ Download and install [Maple Mono NF](https://github.com/subframe7536/maple-font) or [change it to your favourite font](https://github.com/sageil/wezterm/blob/7864a84ef040591a53c77c2fa5abf045a962d4c8/wezterm.lua#L32).
 
 ## Screenshots
 
@@ -30,6 +33,11 @@ local keys = {
 		key = "\\",
 		mods = "LEADER",
 		action = act({ SplitHorizontal = { domain = "CurrentPaneDomain" } }),
+	},
+	{
+		key = "u",
+		mods = "SHIFT|CTRL",
+		action = wezterm.action.DisableDefaultAssignment,
 	},
 	{
 		key = ",",
@@ -76,5 +84,5 @@ return keys
 ```
 ## Features:
 
-1. CMD+, will open wezterm configs using [neovim](https://github.com/sageil/wezterm/blob/bc3babf6ba92e11b194cde1a73fe8f5d5fd5e42d/configs/keys.lua#L20). To continue to use this functionality, you need to setup `export EDITOR="nvim"` in your `.bashrc` or `.zshrc`
-2. Theme will [switch](https://github.com/sageil/wezterm/blob/b3201ae0b4c961ff1d3eb685dbd38d035436bd6e/wezterm.lua#L14) based on the system settings using this function.
+1. CMD+, will open wezterm configs using [neovim](https://github.com/sageil/wezterm/blob/7864a84ef040591a53c77c2fa5abf045a962d4c8/configs/keys.lua#L20). To continue to use this functionality, you need to setup `export EDITOR="nvim"` in your `.bashrc` or `.zshrc`
+2. Theme will [switch](https://github.com/sageil/wezterm/blob/7864a84ef040591a53c77c2fa5abf045a962d4c8/wezterm.lua#L14) based on the system settings using this function.
