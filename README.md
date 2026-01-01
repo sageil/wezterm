@@ -5,7 +5,7 @@
 - backup your existing wezterm configs `mv ~/.config/wezterm ~/.config/wezterm.bak`
 - Clone the repo to `~/.config/wezterm`
 > [!IMPORTANT]
-> None MAC users: Remove the `config.set_environment_variables = {
+> Linux, Windows, and Intel-base Macs users: Remove the `config.set_environment_variables = {
 	PATH = "/opt/homebrew/bin:" .. os.getenv("PATH"),
 }` from [wezterm.lua](https://github.com/sageil/wezterm/blob/7864a84ef040591a53c77c2fa5abf045a962d4c8/wezterm.lua#L24C1-L26C2) or change code to reflect your computer `$PATH`.
 
